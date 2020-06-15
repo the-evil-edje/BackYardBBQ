@@ -5,7 +5,14 @@
       // het starten van de session
       session_start();
 
-      $Verhuren = $_SESSION['BbqVerhuren'];
+      if(isset($_SESSION['BbqVerhuren'])) {
+        $Verhuren = $_SESSION['BbqVerhuren'];
+      }
+      else {
+        $Verhuren = "";
+      }
+
+
 
     // init variables
 		$firstName = "";
